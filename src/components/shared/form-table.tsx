@@ -174,8 +174,8 @@ const CreateFormSubmit = ({ status, response }: any) => {
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="space-y-8 grid grid-cols-4 gap-3"
               >
-                {formdata?.map((item: any) => (
-                  <div className="text-base">
+                {formdata?.map((item: any, index: any) => (
+                  <div key={index} className="text-base">
                     {item.tag === "text" ? (
                       <FormField
                         key={item.name}
